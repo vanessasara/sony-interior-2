@@ -127,8 +127,8 @@ async def health_check():
 
 
 # TODO: Mount routers in later phases
-# from routers import chat
-# app.include_router(chat.router, prefix="/api", tags=["chat"])
+from routers import chat
+app.include_router(chat.router, prefix="/api", tags=["chat"])
 
 
 if __name__ == "__main__":

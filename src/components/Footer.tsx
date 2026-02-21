@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Pinterest, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 const QUICK_LINKS = [
   { name: 'Home', href: '/' },
@@ -19,7 +19,6 @@ const CUSTOMER_SERVICE = [
 const SOCIAL_LINKS = [
   { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
   { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-  { icon: Pinterest, href: 'https://pinterest.com', label: 'Pinterest' },
 ];
 
 export default function Footer() {

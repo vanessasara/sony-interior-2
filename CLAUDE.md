@@ -8,7 +8,7 @@ This is **Sony Interior** - a Next.js 15-based interior design and furniture sho
 
 ## Commands
 
-### Development
+### Frontend
 ```bash
 pnpm dev              # Start development server with Turbopack
 pnpm build            # Build for production
@@ -16,18 +16,26 @@ pnpm start            # Start production server
 pnpm lint             # Run ESLint
 ```
 
+### Backend
+```bash
+cd backend
+./setup.sh                           # Run initial setup
+python run_migrations.py             # Run database migrations
+./start.sh                           # Start FastAPI server (port 8000)
+```
+
 This project uses **pnpm** as the package manager (v10.10.0).
 
 ## Architecture
 
 ### Tech Stack
-- **Framework**: Next.js 15.3.8 (App Router)
-- **React**: v19 with Server Components
-- **TypeScript**: Type-safe development
+- **Frontend**: Next.js 15.3.8 (App Router), React 19, TypeScript
 - **Styling**: Tailwind CSS with shadcn/ui components
 - **Animation**: Framer Motion, GSAP, Lenis smooth scroll
 - **AI Integration**: Vercel AI SDK with Google Gemini 2.5 Flash
 - **UI Components**: Radix UI primitives via shadcn/ui
+- **Backend**: Python FastAPI (port 8000)
+- **Database**: Neon Postgres with pgvector (vector similarity search)
 
 ### Project Structure
 
@@ -101,6 +109,11 @@ src/
 - Use `npx shadcn@latest add <component>` to add new components
 
 ## Development Notes
+
+### Additional Documentation
+- `implementation-guide.md` - Detailed phase-by-phase implementation instructions
+- `backend/README.md` - Backend setup and API documentation
+- `backend/database/README.md` - Database schema and migrations
 
 ### Adding UI Components
 Use the shadcn/ui CLI to add components:
