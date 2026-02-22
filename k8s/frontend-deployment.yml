@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+ name: frontend-deployment
+ namespace: sony-interior
+
+spec:
+  replicas: 1 
+  selector: 
+   matchLabels:
+     app: sony-interior
+  template:
+    metadata:
+      name: frontend-pod
+      namespace: sony-interior
+      labels:
+        app: sony-interior
+
+    spec:
+      containers:
+        - name: frontend
+          image: venisasarah/sony-interior:frontend
+          ports:
+            - containerPort: 3000
+

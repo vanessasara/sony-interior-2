@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployement
+  namespace: sony-interior
+
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sony-interior
+  template:
+    metadata: 
+     name: backend-pod
+     namespace: sony-interior
+     labels:
+       app: sony-interior 
+
+    spec:
+      containers:
+        - name: backend
+          image: venisasarah/sony-interior:backend
+          ports:
+            - containerPort: 8000
